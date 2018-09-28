@@ -64,10 +64,10 @@ h1 {
 .lt_grid-container {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 1px;
-  grid-template-areas: "stat1 stat2" "stat3 stat4";
+  grid-template-areas: "stat1 stat2 stat3";
 }
 [class*='lt_stat']{
   background-color: #e4e4e4;
@@ -82,11 +82,11 @@ h1 {
 
 .lt_stat3 { grid-area: stat3; }
 
-.lt_stat4 { grid-area: stat4; 
-  div {
-    vertical-align: middle;
-  }
-}
+// .lt_stat4 { grid-area: stat4; 
+//   div {
+//     vertical-align: middle;
+//   }
+// }
 
 .counter {
   text-align: center;

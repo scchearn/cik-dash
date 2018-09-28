@@ -24,7 +24,6 @@ function ajaxCall() {
   var ajax = new XMLHttpRequest ();
       ajax.overrideMimeType('application/json');
       method = 'GET';
-      //file = 'http://helpdesk.gemseducation.co.ug/api/v3/requests?OPERATION_NAME=GET_REQUESTS&TECHNICIAN_KEY=3AD418F5-52B7-4D7A-9DC1-A34F2416DF77&INPU_DATA={"list_info": {"start_index": 1,"sort_field": "id","sort_order": "asc","get_total_count": true,"filter_by": {"name": "Open_System"}}}';
       file = 'd.json'
 
   ajax.onreadystatechange = function () {
@@ -84,6 +83,7 @@ function updateCounters() {
   unassignedCntr.innerText = dataUnassigned.length;
   if (dataUnassigned.length > 0) {
     elementUnassigned.classList.add('alert');
+    elementUnassigned.classList.remove('green');
   } else {
     elementUnassigned.classList.remove('alert');
     elementUnassigned.classList.add('green');
@@ -96,6 +96,7 @@ function updateCounters() {
   overdueCntr.innerText = dataOverdue.length;
   if (dataOverdue.length > 0) {
     elementOverdue.classList.add('alert');
+    elementOverdue.classList.remove('green');
   } else {
     elementOverdue.classList.remove('alert');
     elementOverdue.classList.add('green');
