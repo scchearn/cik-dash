@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700|Noto+Serif+KR:900');
+// @import 'reset';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3b4045;
+  color: #3b4045;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+  color: #e3e3e3;
+  font-size: 4em;
+}
+
+.grid-container {
+  padding: 2em;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  // grid-template-rows: 65px 1fr 1fr;
+  grid-gap: 1px;
+  grid-template-areas: ". head ." ". main ." ". . .";
+}
+
+.main {
+  grid-area: main;
+  background-color: #d5d5d5;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 10px;
+  box-shadow: 1px 10px 20px 20px #282b2f;
+}
+
+.head {
+  grid-area: head;
+
+  svg {
+    width: 25%;
+    transition: 1250ms;
+    fill:#00ace5;
+    &.alert {
+      fill: #f44336;
+    }
+    &.green {
+      fill: #009688;
+    }
+  }
+
+}
+.containerDescription {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+//
+// Stat area
+// 
+.lt_grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1px;
+  grid-template-areas: "stat1 stat2" "stat3 stat4";
+}
+[class*='lt_stat']{
+  background-color: #e4e4e4;
+  padding: .8em;
+  margin: .2em;
+  border-radius: 8px;
+}
+
+.lt_stat1 { grid-area: stat1; }
+
+.lt_stat2 { grid-area: stat2; }
+
+.lt_stat3 { grid-area: stat3; }
+
+.lt_stat4 { grid-area: stat4; 
+  div {
+    vertical-align: middle;
+  }
+}
+
+.counter {
+  text-align: center;
+  transition: 1250ms;
+  .count {
+    font-size: 6em;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  &.alert {
+    color: #ffffff;
+    box-shadow: 0px 6px 0px 0px #f44336;
+    background-color: #c33023;
+  }
+  &.green {
+    color: #ffffff;
+    background-color: #009688;
+  }
+  &:hover {
+    transform: translateY(-10px);
+    // transform: scaleX(1.2);
+  }
+}
