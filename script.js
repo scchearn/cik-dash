@@ -117,12 +117,16 @@ function updateCounters() {
  */
 function checkAlert() {
   var counters = elementsCounters;
+      control = 0
   for (var i = counters.length - 1; i >= 0; i--) {
     if (counters[i].classList.contains('alert')) {
-      elementLogo.classList.add('alert');
-    } else {
-      elementLogo.classList.remove('alert');
+      control++
     }
+  }
+  if (control > 0) {
+    elementLogo.classList.add('alert');
+  } else {
+    elementLogo.classList.remove('alert');
   }
 }
 
