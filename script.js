@@ -142,4 +142,4 @@ setInterval(function(){
   getOverdue();
   updateCounters();
   checkAlert();
-}, 3600);
+}, 30000);
